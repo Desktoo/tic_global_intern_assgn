@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+/* Base styles - unchanged */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-radial {
+  @apply border-[rgba(255,255,255,0.15)] border rounded-lg w-[109px] h-[30px] px-[15px] py-[2px];
+  background: #8C45FF66;
+  background: blur(14px);
+  box-shadow: inset 0 0 6px 3px rgba(255, 255, 255, 0.25);
+}
+
+.custom-border {
+  @apply border-[rgba(255,255,255,0.15)];
+}
+
+.line-height-space {
+  @apply leading-[26px] tracking-[-0.01%];
+}
+
+.line-height-space-bentoText {
+  @apply leading-[31px] tracking-[-0.01%];
+}
+
+.line-height-space-client {
+  @apply leading-[65px] tracking-[-1.5%];
+}
+
+.line-height-space-hero {
+  @apply leading-[62px] tracking-[-5.06%] md:leading-[84px] text-5xl md:text-[82px] md:pb-3;
+}
+
+.line-height-space-bento {
+  @apply leading-[38px] tracking-[-0.04%];
+}
+
+.new-highlight {
+  @apply text-[10px] px-[8px] py-[4px] rounded-[40px] gap-[10px] bg-violet-500;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-b from-white to-purple-400 bg-clip-text text-transparent;
+}
+
+.start-free-btn {
+  @apply bg-white text-[15px] font-medium leading-[31px] rounded-lg text-black px-[15px] py-[5px];
+}
+
+.CTA-gradient {
+  background: radial-gradient(
+    ellipse 300px 450px at center top,
+    rgba(140, 69, 255, 0.45) 0%,
+    transparent 100%
+  );
+}
+
+.glow {
+  box-shadow: 0px -50px 70px -10px rgba(140,69,255,0.45);
+}
+
+.glow-pricing {
+  box-shadow: 0px -10px 80px 10px rgba(140,69,255,0.45);
+}
+
+.glow-pricing-bottom {
+  background: radial-gradient(
+    ellipse 140px 350px at center bottom,
+    rgba(140, 69, 255, 0.22) 0%,
+    transparent 100%
+  );
+}
+
+.glow-pricing-top {
+  background: radial-gradient(
+    ellipse 140px 350px at center top,
+    rgba(140, 69, 255, 0.22) 0%,
+    transparent 100%
+  );
+}
+
+.btn-glow {
+  box-shadow: inset 0px 0px 20px -2px rgba(255,255,255,0.4);
+}
+
+.pricing-gradient {
+  background: linear-gradient(to top, rgba(140, 69, 255, 0.45) 20%, rgba(140, 69, 255, 0.22) 50%, transparent 100%);
+}
+
+.glow-features {
+  background: linear-gradient(to right, rgba(140, 69, 255, 0.22) 0%, rgba(140, 69, 255, 0.2) 30%, transparent 100%);
+}
+
+.glow-features-lg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(140, 69, 255, 0.22) 0%, rgba(140, 69, 255, 0.2) 30%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-inset {
+  position: relative;
+}
+
+.glow-inset::after {
+  content: "";
+  position: absolute;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 350px;
+  background: linear-gradient(to top, rgba(140, 69, 255, 0.45) 0%, rgba(140, 69, 255, 0.2) 30%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tic-tac-toe {
+  display: grid;
+  grid-template-columns: 80px 172px 80px;
+  grid-template-rows: 80px 172px 80px;
+}
+
+.grid-glow {
+  box-shadow: 0px 10px 150px 70px rgba(140, 69, 255, 0.45);
+  background-color: rgba(140, 69, 255, 0.45);
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+}
+
+.bg-custom-img {
+  background-image: url('../assets/images/pattern_1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 🔁 Combined Media Queries */
+@media screen and (min-width: 767px) {
+  .CTA-gradient {
+    background: radial-gradient(
+      ellipse 350px 350px at center top,
+      rgba(140, 69, 255, 0.45) 0%,
+      transparent 100%
+    );
+  }
+
+  .glow-pricing-top {
+    background: radial-gradient(
+      ellipse 120px 450px at center left,
+      rgba(140, 69, 255, 0.22) 0%,
+      transparent 100%
+    );
+  }
+
+  .glow-pricing-bottom {
+    background: radial-gradient(
+      ellipse 120px 450px at center right,
+      rgba(140, 69, 255, 0.22) 0%,
+      transparent 100%
+    );
+  }
+
+  .element {
+    box-shadow: 0px -50px 70px 10px rgba(140, 69, 255,0.45);
+  }
+
+  .bg-glow {
+    background: radial-gradient(
+      circle at center 55%,
+      rgba(140, 69, 255, 0.55) 0%,
+      rgba(140, 69, 255, 0.1) 70%,
+      transparent 90%
+    );
+  }
+
+  .tic-tac-toe {
+    display: grid;
+    grid-template-columns: 80px 177px 339px;
+    grid-template-rows: 80px 177px 80px;
+  }
+
+  .grid-glow {
+    box-shadow: 120px 10px 150px 70px rgba(140, 69, 255, 0.45);
+    background-color: rgba(140, 69, 255, 0.45);
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .CTA-gradient {
+    background: radial-gradient(
+      ellipse 500px 300px at center top,
+      rgba(140, 69, 255, 0.45) 0%,
+      transparent 100%
+    );
+  }
+
+  .bg-glow {
+    background: radial-gradient(
+      circle at center 50%,
+      rgba(140, 69, 255, 0.45) 0%,
+      rgba(140, 69, 255, 0.1) 50%,
+      transparent 90%
+    );
+  }
+
+  .glow {
+    box-shadow: 0px -30px 80px -10px rgba(140,69,255,0.45);
+  }
+
+  .tic-tac-toe {
+    display: grid;
+    grid-template-columns: 80px 217px 539px;
+    grid-template-rows: 80px 217px 80px;
+  }
+
+  .grid-glow {
+    box-shadow: 0px 10px 150px 70px rgba(140, 69, 255, 0.45);
+    background-color: rgba(140, 69, 255, 0.45);
+  }
+
+  .cell {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    color: rgba(255,255,255,0.5);
+  }
+}
